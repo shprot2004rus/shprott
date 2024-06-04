@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="konakt.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Spartan:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+   <script>
+        var myForm;
+
+        function textValid(txt, objMessage) {
+            if (txt == "") {
+                objMessage.value = "Väli ei ole täidetud";
+                return false;
+            }
+            objMessage.value = "";
+            return true;
+        }
+
+        function loginValid(logi) {
+            if (logi == "") {
+                myForm.vLog.value = "Väli ei ole täidetud";
+                return false;
+            }
+            var lg = /^[a-zA-Z1-9]+$/i;
+            if (!lg.test(logi)) {
+                myForm.vLog.value = "Vale sisselogimine";
+                return false;
+            } else {
+                myForm.vLog.value = "";
+                return true;
+            }
+        }
+
+        function passValid(pass1, pass2) {
+            if (pass1 == "") {
+                myForm.vPass.value = "Väli ei ole täidetud";
+                return false;
+            }
+            if (pass1.length < 6) {
+                myForm.vPass.value = "Parool on lühike";
+                return false;
+            }
+            if (pass2 == "") {
+                myForm.vPass.value = "Korduv parool ei ole täidetud";
+                return false;
+            }
+
+            if (pass1 != pass2) {
+                myForm.vPass.value = "Parooli mittevastavus";
+            } else {
+                myForm.vPass.value = "";
+                return true;
+            }
+        }
+
+        function validate(mF) {
+            myForm = mF;
+            var ima = textValid(myForm.ima.value, myForm.vIma);
+            var fam = textValid(myForm.family.value, myForm.vFam);
+            var login = loginValid(myForm.login.value);
+            var pass = passValid(myForm.pass1.value, myForm.pass2.value);
+            return ima && fam && login && pass;
+        }
+    </script>
+</head>
+<body>
+    <!-- Навигация -->
+    <div id="headerr">
+	       
+        <nav>
+            <ul>
+                <li><a href="menu.html">Menüü</a></li>
+                <li><a href="meist.html">Meist</a></li>
+                <li><a href="firmastiil.html"><img src="loggo3.png" alt="Logo" class="logo"></a></li>
+                <li><a href="gallery.html">Galerii</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    
+	 
+	 </div>
+
+    <!-- Форма регистрации -->
+    <table>
+        <tr>
+            <td colspan="3" align="center"><h3>Registreerimisvorm</h3></td>
+        </tr>
+        <form name="myForm" onsubmit="return validate(this);">
+            <tr>
+                <td>Nimi<span class="zorka">*</span></td>
+                <td><input type="text" name="ima" maxlength="16"></td>
+                <td><input type="text" class="vld" name="vIma" readonly></td>
+            </tr>
+            <tr>
+                <td>Perekonnanimi<span class="zorka">*</span></td>
+                <td><input type="text" name="family" maxlength="16"></td>
+                <td><input type="text" class="vld" name="vFam" readonly></td>
+            </tr>
+            <tr>
+                <td>Logi sisse<span class="zorka">*</span></td>
+                <td><input type="text" name="login" maxlength="10"></td>
+                <td><input type="text" class="vld" name="vLog" readonly></td>
+            </tr>
+            <tr>
+                <td>Salasõna<span class="zorka" name="vPass">*</span></td>
+                <td><input type="password" name="pass1" maxlength="10"></td>
+                <td><input type="text" class="vld" name="vPass" readonly></td>
+            </tr>
+            <tr>
+                <td>Korda salasõna<span class="zorka">*</span></td>
+                <td><input type="password" name="pass2" maxlength="10"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"><input type="submit" value="Registreeri"> <input type="submit" value="Sissepääs"></td>
+            </tr>
+        </form>
+    </table>
+
+  <!-- Контактная информация -->
+    <main id="contact-section">
+        <h2>Kontakt</h2>
+        <div class="contact-info">
+            <p><strong>Address:</strong> Kreenholmi 45, 20104 Narva</p>
+            <p><strong>Telefon:</strong> +372 123 4567</p>
+            <p><strong>E-post:</strong> info@maitsev.ee</p>
+        </div>
+    </main>
+    
+    <!-- Подвал -->
+		  <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.facebook.com" >
+                    <img src="facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" >
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.twitter.com" >
+                    <img src="twitter-icon.png" alt="Twitter">
+                </a>
+            </div>
+             <p>&copy; 2024 Kohvik "Chapter & Coffee". Kõik õigused kaitstud. Aleksandra Sokolova NPMM23</p>
+        </div>
+    </footer>
+</html>

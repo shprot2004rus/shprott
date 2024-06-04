@@ -1,0 +1,184 @@
+<!Doctype html>
+<html lang="et">
+  <head>
+	    <link rel= "stylesheet" href="firmastiil.css">
+	    <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+	      <title>
+	       stiil
+	      </title>
+	 <meta charset="utf-8">
+</head>
+	<body>
+	    <div id="headerr"> 
+        <nav>
+            <ul>
+                <li><a href="menu.html">Menüü</a></li>
+                <li><a href="meist.html">Meist</a></li>
+                <li><a href="firmastiil.html"><img src="loggo3.png" alt="Logo" class="logo"></a></li>
+                <li><a href="gallery.html">Galerii</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    
+	 
+	 </div>
+	 
+	  <div id="main">
+	    <div id="banner">
+		
+		
+<div class="wrapper">
+  <header>
+    <div class="headline">
+    </div>
+    <ul id="slides">
+      <li class="slide slide1 showing"></li>
+      <li class="slide slide2"></li>
+      <li class="slide slide3"></li>
+      <button onClick="prevSlide();"><i class="arrow arrow-next fa fa-angle-left fa-5x"></i></button>
+      <button onClick="nextSlide();"><i class="arrow arrow-prev fa fa-angle-right fa-5x"></i></button>
+    </ul>
+  </header>
+</div>
+
+<script>
+var slides = document.querySelectorAll("#slides .slide");
+var currentSlide = 0;
+
+//Uncomment for auto play
+var slideInterval = setInterval(nextSlide,4000);
+  
+function nextSlide(){
+  slides[currentSlide].classList.remove("showing");
+  currentSlide = (currentSlide+1)%slides.length;
+  slides[currentSlide].classList.add("showing");
+  console.log("next slide");
+}
+
+function prevSlide(){
+  if(currentSlide > 0){
+  slides[currentSlide].classList.remove("showing");
+  currentSlide = (currentSlide-1)%slides.length;
+  slides[currentSlide].classList.add("showing");
+  console.log("prev slide");
+  }
+  console.log("no previous slide")
+}
+</script>	
+		
+		
+
+		
+		</div>	
+
+
+
+		
+		<section id="nextEvent">
+        <h2>Tulevane üritus</h2>
+        <div class="eventInfo">
+            
+            <img src="reklaamlehttt .jpg" alt="Ближайшее мероприятие">
+        </div>
+    </section>
+		
+		   <div id="infoarea">
+        <h2>KÕIGE POPULAARSEMAD TOIDUD</h2>
+    </div>
+    
+    <div class="mainInfo">
+        <div class="fotoEda">
+            <img src="firma44.jpg" alt="Populaarne roog 1">
+        </div>
+        <div class="infoEda">
+            <div class="nameEda">
+                <h3>Hobiti Hommikusöök - 12€</h3>
+            </div>
+            <div class="sostavEda">
+                <p>Maitsev ja külluslik hommikusöök, mis sisaldab värskeid köögivilju, munapuder, suitsutatud peekonit ja röstsaia. Inspireeritud "Kääbikust". </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mainInfo">
+        <div class="fotoEda">
+            <img src="firma55.jpg" alt="Populaarne roog 2">
+        </div>
+        <div class="infoEda">
+            <div class="nameEda">
+                <h3>Harry Potteri Kõrvitsapirukas - 8€</h3>
+            </div>
+            <div class="sostavEda">
+                <p>Kõrvitsapirukas, mis viib sind otse Sigatüüka söögisaali. Täiuslik magustoit igal ajal aastast. Inspireeritud "Harry Potter ja nõia kivi".</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mainInfo">
+        <div class="fotoEda">
+            <img src="firma66.jpg" alt="Populaarne roog 3">
+        </div>
+        <div class="infoEda">
+            <div class="nameEda">
+                <h3>Narnias Lõvi Sup - 10€</h3>
+            </div>
+            <div class="sostavEda">
+                <p>Rikkalik ja maitsev lihasupp, mis annab jõudu ja soojendab ka kõige külmemal päeval. Inspireeritud "Narnia kroonikad".</p>
+            </div>
+        </div>
+    </div>
+		 
+		  <div id="lisaInfo">
+        <div id="kontakt">
+            <h1>Kontakt</h1>
+            <p>Aadress: Kreenholmi 45, 20104 Narva</p>
+            <p>Telefon: +372 1234 5678</p>
+            <p>Email: info@kohvik.ee</p>
+        </div>
+        <div id="time">
+            <h1>Tööaeg</h1>
+            <p>Esmaspäev - Reede: 8:00 - 22:00</p>
+            <p>Laupäev: 10:00 - 20:00</p>
+            <p>Pühapäev: 10:00 - 21:00</p>
+        </div>
+        <div id="karta">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2033.3076973815475!2d28.18595407735934!3d59.36120340846874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4694483734711935%3A0xf473353b7248cd9c!2sKreenholmi%2045%2C%2020104%20Narva!5e0!3m2!1sru!2see!4v1717139445910!5m2!1sru!2see" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+	
+		
+		  <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.facebook.com" >
+                    <img src="facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" >
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.twitter.com" >
+                    <img src="twitter-icon.png" alt="Twitter">
+                </a>
+            </div>
+             <p>&copy; 2024 Kohvik "Chapter & Coffee". Kõik õigused kaitstud. Aleksandra Sokolova NPMM23</p>
+        </div>
+    </footer>
+	 
+
+   
+	  
+	  </div>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+	   
+	</body>	
+		
+	</html>

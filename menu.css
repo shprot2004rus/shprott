@@ -1,0 +1,166 @@
+body {
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C8C8C3;
+}
+
+#headerr{
+	 width: 100%;
+    height: 150px;
+    background-color: #774A39;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li .logo {
+    height: 100px; /* Adjust the size of the logo as needed */
+}
+
+
+.subnav {
+    display: flex;
+    justify-content: center;
+    background-color: #A8C9D6;
+    padding: 10px 0;
+}
+
+.subnav-item {
+    color: #774A39;
+    text-decoration: none;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+.subnav-item:hover {
+    text-decoration: underline;
+}
+
+#menu-section {
+    padding: 20px;
+}
+
+#infoarea {
+    width: 100%;
+    height: 100px;
+    background-color: #A8C9D6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#infoarea h2 {
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+    color: #774A39;
+}
+
+.mainInfo {
+    width: 100%;
+    height: auto;
+    background-color: #E6D5C3;
+    display: flex;
+    margin: 20px 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.fotoEda {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotoEda img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.detailsEda {
+    width: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nameEda {
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #774A39;
+    margin-bottom: 10px;
+}
+
+.descriptionEda {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+footer {
+    width: 100%;
+    background-color: #774A39;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+	color: white;
+    margin: 0 10px;
+	font-family: 'Spartan', sans-serif;
+	text-decoration: none;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* чтобы иконки были белыми */
+}
+
+footer p {
+    margin: 5px 0;
+}

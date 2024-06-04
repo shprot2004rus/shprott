@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="galerii.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Spartan:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <div id="headerr">
+	       
+        <nav>
+            <ul>
+                <li><a href="menu.html">Menüü</a></li>
+                <li><a href="meist.html">Meist</a></li>
+                <li><a href="firmastiil.html"><img src="loggo3.png" alt="Logo" class="logo"></a></li>
+                <li><a href="gallery.html">Galerii</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    
+	 
+	 </div>
+
+    <!-- Галерея -->
+    <main id="gallery-section">
+        <h2>Illustrations</h2>
+
+        <p><img id="largeImg" src="firma1.jpg" alt="Large image" /></p>
+
+        <p class="thumbs">
+            <a href="firma1.jpg" title="Image 1"><img src="firma1.jpg" /></a>
+            <a href="firma88.jpg" title="Image 2"><img src="firma88.jpg" /></a>
+            <a href="firma10.jpg" title="Image 3"><img src="firma10.jpg" /></a>
+          
+        </p>
+    </main>
+    
+    <!-- Подвал -->
+  		  <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.facebook.com" >
+                    <img src="facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" >
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.twitter.com" >
+                    <img src="twitter-icon.png" alt="Twitter">
+                </a>
+            </div>
+             <p>&copy; 2024 Kohvik "Chapter & Coffee". Kõik õigused kaitstud. Aleksandra Sokolova NPMM23</p>
+        </div>
+    </footer>
+
+    <!-- Встроенный скрипт -->
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("h2").append('<em></em>');
+            $(".thumbs a").click(function() {
+                var largePath = $(this).attr("href");
+                var largeAlt = $(this).attr("title");
+                $("#largeImg").attr({ src: largePath, alt: largeAlt });
+                $("h2 em").html(" (" + largeAlt + ")");
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
